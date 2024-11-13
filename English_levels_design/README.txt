@@ -1,4 +1,4 @@
-Описание задание - файл Task_description.pdf
+Описание задания - файл Task_description.pdf
 Общий файл с тест-кейсами - файл Test_case_All.pdf (на основе Test_case1.pdf,... Test_case9.pdf)
 Общий баг-репорт - файл Bug_reports.pdf (на основе Bug_reports.docx)
 
