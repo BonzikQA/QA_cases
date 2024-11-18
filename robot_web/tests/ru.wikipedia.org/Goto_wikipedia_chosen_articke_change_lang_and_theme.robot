@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Переходим на сайт википедии, переходим на избранную статью
+Documentation    Переходим на сайт википедии, переходим на избранную статью, меняем язык на англ, меняем тему на тёмную
 Resource         wikipedia.resource
 Resource         ../../locators/ru.wikipedia.org_lc/wikipedia_lc.resource
 
