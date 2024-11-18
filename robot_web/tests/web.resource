@@ -13,7 +13,7 @@ Precondition: Open Browser And Maximize
     Maximize Browser Window
 
 Postcondition: Close Browser
-    [Documentation]    Закрываем браузер через Х секунд после успешного теста
+    [Documentation]    Закрываем браузер через (arg - secs_of_sleep) секунд после успешного теста
     [Arguments]    ${secs_of_sleep}
 
     Sleep    time_=${secs_of_sleep}

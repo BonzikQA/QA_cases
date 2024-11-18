@@ -9,8 +9,8 @@ Goto Article Of A Day
     [Documentation]    Ждём пока кнопка перехода к избранной статье (${GOTO_ARTICKE_OF_A_DAY_BTN})
     ...    не будет видна и жмём на неё
 
-    Wait Until Element Is Visible    locator=${GOTO_ARTICKE_OF_A_DAY_BTN}    timeout=10s
-    Click Element    locator=${GOTO_ARTICKE_OF_A_DAY_BTN}
+    Wait Until Element Is Visible    locator=${GOTO_ARTICLE_OF_A_DAY_BTN}    timeout=10s
+    Click Element    locator=${GOTO_ARTICLE_OF_A_DAY_BTN}
 
 Change The Lang To Eng
     [Documentation]    Ждём пока кнопка смены языка на Англ (${CHANGE_LANG_TO_EN_BTN})

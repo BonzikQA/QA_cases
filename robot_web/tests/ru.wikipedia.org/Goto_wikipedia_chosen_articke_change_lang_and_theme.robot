@@ -10,7 +10,7 @@ Test Timeout     1m
 
 
 *** Test Cases ***
-Click On Article Of A Day On Wikipedia
+Click On Article Of A Day On Wikipedia Then Change Lang And Theme
     [Documentation]    Открываем стр википедии в хроме -> переходим на стр. избр. статьи ->
     ...    меняем язык на англ -> меняем тему на тёмную
 

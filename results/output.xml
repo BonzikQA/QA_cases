@@ -1,107 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-11-18T23:53:11.256886" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-11-19T02:42:56.322514" rpa="false" schemaversion="5">
 <suite id="s1" name="QA cases" source="C:\Users\newak\OneDrive\Рабочий стол\Bonzik\QA_cases">
 <suite id="s1-s1" name="Robot Web" source="C:\Users\newak\OneDrive\Рабочий стол\Bonzik\QA_cases\robot_web">
 <suite id="s1-s1-s1" name="Tests" source="C:\Users\newak\OneDrive\Рабочий стол\Bonzik\QA_cases\robot_web\tests">
 <suite id="s1-s1-s1-s1" name="Ru.Wikipedia.Org" source="C:\Users\newak\OneDrive\Рабочий стол\Bonzik\QA_cases\robot_web\tests\ru.wikipedia.org">
-<suite id="s1-s1-s1-s1-s1" name="Wikipedia goto article of a day and change lang to eng" source="C:\Users\newak\OneDrive\Рабочий стол\Bonzik\QA_cases\robot_web\tests\ru.wikipedia.org\Wikipedia_goto_article_of_a_day_and_change_lang_to_eng.robot">
+<suite id="s1-s1-s1-s1-s1" name="Goto wikipedia chosen articke change lang and theme" source="C:\Users\newak\OneDrive\Рабочий стол\Bonzik\QA_cases\robot_web\tests\ru.wikipedia.org\Goto_wikipedia_chosen_articke_change_lang_and_theme.robot">
 <test id="s1-s1-s1-s1-s1-t1" name="Click On Article Of A Day On Wikipedia" line="13">
 <kw name="Precondition: Open Browser And Maximize" owner="web" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-18T23:53:11.424454" level="INFO">Opening browser 'chrome' to base url 'https://ru.wikipedia.org'.</msg>
+<msg time="2024-11-19T02:42:56.537955" level="INFO">Opening browser 'chrome' to base url 'https://ru.wikipedia.org'.</msg>
 <arg>url=${site_url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-18T23:53:11.424454" elapsed="2.105079"/>
+<status status="PASS" start="2024-11-19T02:42:56.536954" elapsed="2.719041"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-18T23:53:13.529533" elapsed="0.041002"/>
+<status status="PASS" start="2024-11-19T02:42:59.255995" elapsed="0.035842"/>
 </kw>
 <arg>site_url=https://ru.wikipedia.org</arg>
 <arg>browser=chrome</arg>
 <doc>Предусловие: Открываем сайт (arg1 - site_url) в Браузере
 (arg2 - browser) и расширяем окно на весь экран</doc>
-<status status="PASS" start="2024-11-18T23:53:11.423454" elapsed="2.147081"/>
+<status status="PASS" start="2024-11-19T02:42:56.535955" elapsed="2.756891"/>
 </kw>
 <kw name="Goto Article Of A Day" owner="wikipedia">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=${GOTO_ARTICKE_OF_A_DAY_BTN}</arg>
+<arg>locator=${GOTO_ARTICLE_OF_A_DAY_BTN}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-18T23:53:13.571532" elapsed="0.020512"/>
+<status status="PASS" start="2024-11-19T02:42:59.294676" elapsed="0.117422"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-18T23:53:13.593044" level="INFO">Clicking element '(//a[text()='Читать'])[1]'.</msg>
-<arg>locator=${GOTO_ARTICKE_OF_A_DAY_BTN}</arg>
+<msg time="2024-11-19T02:42:59.413105" level="INFO">Clicking element '(//a[text()='Читать'])[1]'.</msg>
+<arg>locator=${GOTO_ARTICLE_OF_A_DAY_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-18T23:53:13.592044" elapsed="0.422602"/>
+<status status="PASS" start="2024-11-19T02:42:59.412098" elapsed="0.520843"/>
 </kw>
-<doc>Ждём пока кнопка перехода к избранной статье ((//a[text()='Читать'])[1])
+<doc>Ждём пока кнопка перехода к избранной статье (${GOTO_ARTICKE_OF_A_DAY_BTN})
 не будет видна и жмём на неё</doc>
-<status status="PASS" start="2024-11-18T23:53:13.571532" elapsed="0.443114"/>
+<status status="PASS" start="2024-11-19T02:42:59.294172" elapsed="0.638769"/>
 </kw>
 <kw name="Change The Lang To Eng" owner="wikipedia">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${CHANGE_LANG_TO_EN_BTN}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-18T23:53:14.016644" elapsed="0.129648"/>
+<status status="PASS" start="2024-11-19T02:42:59.933942" elapsed="0.181182"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-18T23:53:14.147291" level="INFO">Clicking element '//a[@lang="en"]'.</msg>
+<msg time="2024-11-19T02:43:00.116184" level="INFO">Clicking element '//a[@lang="en"]'.</msg>
 <arg>locator=${CHANGE_LANG_TO_EN_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-18T23:53:14.146292" elapsed="0.396506"/>
+<status status="PASS" start="2024-11-19T02:43:00.115124" elapsed="0.494298"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-11-18T23:53:14.553249" level="INFO">Current page contains element '//h1[@id="firstHeading"]'.</msg>
+<msg time="2024-11-19T02:43:00.705659" level="INFO">Current page contains element '//h1[@id="firstHeading"]'.</msg>
 <arg>locator=${FIRST_HEADING}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-11-18T23:53:14.542798" elapsed="0.011452"/>
+<status status="PASS" start="2024-11-19T02:43:00.610801" elapsed="0.096851"/>
 </kw>
 <doc>Ждём пока кнопка смены языка на Англ (//a[@lang="en"])
 не будет видна и жмём на неё. Ждём, пока не будет видно заголовка статьи (значит прогрузилось)</doc>
-<status status="PASS" start="2024-11-18T23:53:14.015647" elapsed="0.538603"/>
+<status status="PASS" start="2024-11-19T02:42:59.933942" elapsed="0.773710"/>
 </kw>
 <kw name="Change View Theme To Dark Mode" owner="wikipedia">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>locator=${DARK_MODE_RADAR}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-18T23:53:14.555262" elapsed="0.218437"/>
+<status status="PASS" start="2024-11-19T02:43:00.708652" elapsed="0.225380"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-18T23:53:14.774693" level="INFO">Clicking element '//input[@id='skin-client-pref-skin-theme-value-night']'.</msg>
+<msg time="2024-11-19T02:43:00.935032" level="INFO">Clicking element '//input[@id='skin-client-pref-skin-theme-value-night']'.</msg>
 <arg>locator=${DARK_MODE_RADAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-18T23:53:14.773699" elapsed="0.151715"/>
+<status status="PASS" start="2024-11-19T02:43:00.934032" elapsed="0.087305"/>
 </kw>
 <doc>Ждём пока радар-кнопка смены темы на тёмную
 (//input[@id='skin-client-pref-skin-theme-value-night']) не появится и жмём её</doc>
-<status status="PASS" start="2024-11-18T23:53:14.554250" elapsed="0.371164"/>
+<status status="PASS" start="2024-11-19T02:43:00.708652" elapsed="0.312685"/>
 </kw>
 <kw name="Postcondition: Close Browser" owner="web" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-19T02:43:11.024035" level="INFO">Slept 10 seconds.</msg>
+<arg>time_=${secs_of_sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-19T02:43:01.023346" elapsed="10.000689"/>
+</kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-18T23:53:14.927463" elapsed="2.126742"/>
+<status status="PASS" start="2024-11-19T02:43:11.025044" elapsed="2.206714"/>
 </kw>
-<doc>Закрываем браузер</doc>
-<status status="PASS" start="2024-11-18T23:53:14.926456" elapsed="2.127749"/>
+<arg>secs_of_sleep=10</arg>
+<doc>Закрываем браузер через (arg - secs_of_sleep) секунд после успешного теста</doc>
+<status status="PASS" start="2024-11-19T02:43:01.022342" elapsed="12.209416"/>
 </kw>
-<doc>Открываем стр википедии в хроме -&gt; переходим на стр. избр. статьи -&gt; меняем язык на англ</doc>
+<doc>Открываем стр википедии в хроме -&gt; переходим на стр. избр. статьи -&gt;
+меняем язык на англ -&gt; меняем тему на тёмную</doc>
 <timeout value="1 minute"/>
-<status status="PASS" start="2024-11-18T23:53:11.422454" elapsed="5.631751"/>
+<status status="PASS" start="2024-11-19T02:42:56.533954" elapsed="16.699804"/>
 </test>
-<doc>Переходим на сайт википедии, переходим на избранную статью</doc>
-<status status="PASS" start="2024-11-18T23:53:11.280645" elapsed="5.775716"/>
+<doc>Переходим на сайт википедии, переходим на избранную статью, меняем язык на англ, меняем тему на тёмную</doc>
+<status status="PASS" start="2024-11-19T02:42:56.350170" elapsed="16.884588"/>
 </suite>
-<status status="PASS" start="2024-11-18T23:53:11.278648" elapsed="5.779721"/>
+<status status="PASS" start="2024-11-19T02:42:56.348154" elapsed="16.888052"/>
 </suite>
-<status status="PASS" start="2024-11-18T23:53:11.276638" elapsed="5.783020"/>
+<status status="PASS" start="2024-11-19T02:42:56.346634" elapsed="16.890671"/>
 </suite>
-<status status="PASS" start="2024-11-18T23:53:11.275398" elapsed="5.785268"/>
+<status status="PASS" start="2024-11-19T02:42:56.344398" elapsed="16.894453"/>
 </suite>
-<status status="PASS" start="2024-11-18T23:53:11.259887" elapsed="5.802165"/>
+<status status="PASS" start="2024-11-19T02:42:56.326235" elapsed="16.913724"/>
 </suite>
 <statistics>
 <total>
@@ -114,7 +122,7 @@
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Robot Web">QA cases.Robot Web</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Tests">QA cases.Robot Web.Tests</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Ru.Wikipedia.Org">QA cases.Robot Web.Tests.Ru.Wikipedia.Org</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Wikipedia goto article of a day and change lang to eng">QA cases.Robot Web.Tests.Ru.Wikipedia.Org.Wikipedia goto article of a day and change lang to eng</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Goto wikipedia chosen articke change lang and theme">QA cases.Robot Web.Tests.Ru.Wikipedia.Org.Goto wikipedia chosen articke change lang and theme</stat>
 </suite>
 </statistics>
 <errors>
