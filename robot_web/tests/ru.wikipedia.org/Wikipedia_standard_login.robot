@@ -9,11 +9,6 @@ Test Teardown    web.Postcondition: Close Browser    secs_of_sleep=5
 Test Timeout     1m
 
 
-*** Variables ***
-${VALID_LOGIN}    Bonzik_YA
-${VALID_PASSWORD}    Bonzik_YA
-
-
 *** Test Cases ***
 Standard login Wikipedia
     [Documentation]    Стандартная авторизация с валидными логином и паролем
@@ -23,8 +18,8 @@ Standard login Wikipedia
     Clear Element Text    locator=${LOGIN_FIELD}
     Clear Element Text    locator=${PASSWORD_FIELD}
 
-    Input Text    locator=${LOGIN_FIELD}    text=${VALID_LOGIN}
-    Input Password    locator=${PASSWORD_FIELD}    password=${VALID_PASSWORD}
+    Input Text    locator=${LOGIN_FIELD}    text=%{VALID_LOGIN}
+    Input Password    locator=${PASSWORD_FIELD}    password=%{VALID_PASSWORD}
     Click Button    locator=${LOGIN_ATTEMPT_BTN}
 
     Wait Until Element Is Visible    locator=${LOGOUT_CSS}

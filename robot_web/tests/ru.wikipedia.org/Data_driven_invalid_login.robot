@@ -9,20 +9,15 @@ Test Teardown    web.Postcondition: Close Browser    secs_of_sleep=5
 Test Timeout     1m
 
 
-*** Variables ***
-${VALID_LOGIN}    Bonzik_YA
-${VALID_PASSWORD}    Bonzik_YA
-
-
 *** Test Cases ***
 Data Driven Invalid Login
     [Documentation]    Дата дривен авторизация с невалидными данными
     [Template]    Invalid Login Wikipedia
 
     # 1. Валидный логин и невалидный пароль
-    ${VALID_LOGIN}    invalid_password
+    %{VALID_LOGIN}    invalid_password
     # 2. Невалидный логин и валидный пароль
-    invalid_login    ${VALID_PASSWORD}
+    invalid_login    %{VALID_PASSWORD}
     # 3. Невалидный логин и невалдный пароль
     invalid_login    invalid_password
 
